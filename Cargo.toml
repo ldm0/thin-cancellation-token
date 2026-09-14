@@ -2,8 +2,24 @@
 name = "thin-cancellation-token"
 version = "0.1.0"
 edition = "2024"
+rust-version = "1.85"
 description = "A flat, one-shot cancellation token with lock-free status checks."
+license = "MIT OR Apache-2.0"
+repository = "https://github.com/ldm0/thin-cancellation-token"
+documentation = "https://docs.rs/thin-cancellation-token"
 readme = "README.md"
+keywords = ["async", "cancellation", "tokio", "synchronization"]
+categories = ["asynchronous", "concurrency"]
+include = [
+    "/src/**",
+    "/tests/**",
+    "/benches/**",
+    "/scripts/benchmark.py",
+    "/Cargo.toml",
+    "/Cargo.lock",
+    "/README.md",
+    "/LICENSE*",
+]
 
 [dependencies]
 pin-project-lite = "0.2.17"
