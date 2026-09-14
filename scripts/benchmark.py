@@ -17,7 +17,9 @@ BUILD_NAMES = {
     "nextest", "cmake", "ninja", "clang", "clang++", "gcc", "g++", "cc1", "cc1plus",
 }
 SOURCES = [
-    "Cargo.toml", "Cargo.lock", "src/lib.rs", "benches/cancellation.rs",
+    "Cargo.toml", "Cargo.lock",
+    *sorted(str(path.relative_to(ROOT)) for path in (ROOT / "src").rglob("*.rs")),
+    "benches/cancellation.rs",
     "benches/memory.rs", "benches/support/mod.rs", "scripts/benchmark.py",
     "tests/cancellation.rs", "tests/drop_guard.rs", "README.md",
 ]
